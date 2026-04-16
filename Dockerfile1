@@ -14,6 +14,8 @@ RUN npm install
 COPY . .
  
 # 构建 React 应用（可选，如果你需要打包的话）
+
+
 RUN npm run build
  
 # 暴露端口（通常是3000）
