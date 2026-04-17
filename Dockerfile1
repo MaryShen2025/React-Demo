@@ -21,8 +21,6 @@ RUN npm run build
 # 暴露端口（通常是3000）
 EXPOSE 3000
 
-
-
 # 运行应用
 CMD ["npm", "start"]
 
