@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-service
+  namespace: devops
+spec:
+  replicas: 3
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: react-service
+  template:
+    metadata:
+      labels:
+        app: react-service
+    spec:
+      containers:
+      - name: react-service
+        image: crpi-6n2ic4r2v6kp998k.cn-hangzhou.personal.cr.aliyuncs.com/devops1-mary/maryshen2025:5.0.0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 88
