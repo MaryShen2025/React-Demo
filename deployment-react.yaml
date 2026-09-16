@@ -19,4 +19,4 @@ spec:
         image: crpi-6n2ic4r2v6kp998k.cn-hangzhou.personal.cr.aliyuncs.com/devops1-mary/maryshen2025:5.0.0
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 3000
+        - containerPort: 8080
