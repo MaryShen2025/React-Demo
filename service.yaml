@@ -9,5 +9,5 @@ spec:
     app: react-service
   ports:
   - port: 80          # Service的端口，集群内访问svc用这个端口
-    targetPort: 3000  # 容器内部应用真实端口，和containerPort:3000对应
+    targetPort: 8080  # 容器内部应用真实端口，和containerPort:3000对应
   type: NodePort      # NodePort 可以通过节点IP+端口外部访问；如果不需要外部访问可以改成ClusterIP
