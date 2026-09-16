@@ -20,6 +20,6 @@ spec:
           service:
             name: react-service-svc  # Must match service name in service.yaml
             port:
-              number: 80 # Service port, NOT container port 3000
+              number: 80 # Service port, NOT container port 8080
 
                           
