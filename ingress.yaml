@@ -3,23 +3,18 @@ kind: Ingress
 metadata:
   name: react-service-ingress
   namespace: devops
-  annotations:
-    # Use nginx ingress controller
-    kubernetes.io/ingress.class: "nginx"
-    # Fix 404 error when refresh react frontend route
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
-    nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
+  ingressClassName: nginx
   rules:
-  - host: react.test.com  # Replace with your own domain name
+  - host: react.test.com
     http:
       paths:
-      - path: /(.*)
+      - path: /
         pathType: Prefix
         backend:
           service:
-            name: react-service-svc  # Must match service name in service.yaml
+            name: react-service-svc
             port:
-              number: 80 # Service port, NOT container port 8080
+              number: 80
 
                           
